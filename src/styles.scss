@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* Importing Bootstrap SCSS file. */
+@import '~bootstrap/scss/bootstrap';
+
+
+mat-form-field {
+    display: block !important;
+}
+
+label {
+    display: block;
+}
+
+.mat-radio-button ~ .mat-radio-button {
+    margin-left: 16px;
+}
+
+mat-checkbox{
+    margin-right: 15px;
+}
+
+.card {
+    padding:15px;
+    margin-bottom: 15px;
+}

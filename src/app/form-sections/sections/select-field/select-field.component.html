@@ -1,0 +1,9 @@
+<div class="form-group">
+    <label>{{field.label}}</label>
+    <mat-form-field appearance="fill">
+        <mat-label>Choose</mat-label>
+        <mat-select [multiple]="field.multiple">
+            <mat-option [value]="option.key" *ngFor="let option of field.options">{{option.value}}</mat-option>
+         </mat-select>
+    </mat-form-field>
+</div>

@@ -1,0 +1,50 @@
+<div class="container">
+
+    <br>
+    <br>
+    <h1>Form title</h1>
+
+
+    <ng-container *ngFor="let section of form.sections">
+
+        <!-- section -->
+        <div class="card">
+            <h2>{{section.name}}</h2>
+            <!-- row -->
+            <div class="row">
+                <ng-container *ngFor="let field  of section.fields">
+
+                    <!--  checkbox-field -->
+                    <app-checkbox-field [field]="field" *ngIf="field.type == 'checkbox'" class="{{field.width}}">
+                    </app-checkbox-field>
+
+                    <!-- radio-field -->
+                    <app-radio-field [field]="field" *ngIf="field.type == 'radio'" class="{{field.width}}">
+                    </app-radio-field>
+
+                    <!-- select-field -->
+                    <app-select-field [field]="field" *ngIf="field.type == 'select'" class="{{field.width}}">
+                    </app-select-field>
+
+                    <!-- text-input field-->
+                    <app-text-input-field [field]="field" *ngIf="field.type == 'text'" class="{{field.width}}">
+                    </app-text-input-field>
+
+                    <!-- textarea-field -->
+                    <app-textarea-field [field]="field" *ngIf="field.type == 'textarea'" class="{{field.width}}">
+                    </app-textarea-field>
+
+                </ng-container>
+            </div>
+            <!-- row -->
+        </div>
+        <!-- ./section -->
+
+    </ng-container>
+
+
+    <div class="form-group text-right">
+        <button mat-flat-button color="primary">Primary</button>
+    </div>
+
+</div>
